@@ -34,6 +34,7 @@ CREATE TABLE `dosen` (
   `status_pegawai` varchar(10) DEFAULT NULL,
   `pendidikan_tertinggi` varchar(5) DEFAULT NULL,
   `jabatan_akademik` varchar(20) DEFAULT NULL,
+  `password` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`nip_dosen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -141,4 +142,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-16 15:28:08
+-- Dump completed on 2021-06-16 17:33:29
