@@ -21,7 +21,8 @@ public class Fungsi {
     String namadb = "mahasiswa_sakti";
     public Fungsi() {
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost/" + namadb, "root", "");
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahasiswa_stiki", "root", "");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -57,11 +58,11 @@ public class Fungsi {
         return result;
     }
     public String login(String username, String password) {
-        ResultSet result = executeResult("select * from orang where NOKRP='" + username + "' and PASSWORD='" + password + "'");
+        ResultSet result = executeResult("select * from dosen where nip_dosen='" + username + "' and PASSWORD='" + password + "'");
         String nokrp = null;
         try {
             if (result.next()) {
-                nokrp = result.getString("NOKRP");
+                nokrp = result.getString("nip_dosen");
             } else {
                 JOptionPane.showMessageDialog(null, "No KRP atau password salah");
             }
