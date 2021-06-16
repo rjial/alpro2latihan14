@@ -45,6 +45,7 @@ CREATE TABLE `dosen` (
 
 LOCK TABLES `dosen` WRITE;
 /*!40000 ALTER TABLE `dosen` DISABLE KEYS */;
+INSERT INTO `dosen` VALUES ('201111000','201111000','Derajat ','Malang','088871255515','stiki@gmali.com','Laki-Laki','24-10-2001','dosen','S3','BAA','ajat123'),('201111011','201111011','RIzal','Malang','0813358193','stiki1@gmail.com','laki-Laki','24-11-2001','Dosen','S3','BAA','rizal123'),('201111022','201111022','Yoga','Malang','08193381849','stiki2@gmail.com','Perempuan','24-12-2002','Dosen','S3','Asdos','yoga123');
 /*!40000 ALTER TABLE `dosen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-16 17:33:29
+-- Dump completed on 2021-06-16 18:15:51
