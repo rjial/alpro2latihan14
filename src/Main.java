@@ -1,3 +1,6 @@
+
+import java.sql.ResultSet;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -357,7 +360,23 @@ public class Main extends javax.swing.JFrame {
     private void jPanel6ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel6ComponentShown
         // TODO add your handling code here:
         lblnip.setText(nokrp);
-	
+        try {
+            ResultSet result = fungsi.executeResult("select * from dosen where nip_dosen='" + nokrp + "'");
+            if (result.next()) {
+                nidnlabel.setText(result.getString("nidn_dosen"));
+                namalabel.setText(result.getString("nama_dosen"));
+                alamatlabel.setText(result.getString("alamat"));
+                telplabel.setText(result.getString("telepon"));
+                emaillabel.setText(result.getString("email"));
+                jklabel.setText(result.getString("jenis_kelamin"));
+                ttllabel.setText(result.getString("tempat_tgl_lahir"));
+                statuslabel.setText(result.getString("status_pegawai"));
+                pendidikanlabel.setText(result.getString("pendidikan_tertinggi"));
+                jabatanlabel.setText(result.getString("pendidikan_tertinggi"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jPanel6ComponentShown
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
