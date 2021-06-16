@@ -212,60 +212,103 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="167" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="lblnip" max="32767" attributes="0"/>
-                          <Component id="nidnlabel" max="32767" attributes="0"/>
-                          <Component id="namalabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="alamatlabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="telplabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="emaillabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jklabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ttllabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="statuslabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pendidikanlabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jabatanlabel" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="lblnip1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="nidnlabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="namalabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="alamatlabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="telplabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="emaillabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jklabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="ttllabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="statuslabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="pendidikanlabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jabatanlabel1" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel1" min="-2" pref="167" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="390" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnback" min="-2" pref="75" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                      <EmptySpace pref="148" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btnback" min="-2" pref="75" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lblnip" max="32767" attributes="0"/>
+                                  <Component id="nidnlabel" max="32767" attributes="0"/>
+                                  <Component id="namalabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="alamatlabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="telplabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="emaillabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jklabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ttllabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="statuslabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pendidikanlabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jabatanlabel" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="43" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="lblnip" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="nidnlabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="namalabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="alamatlabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="telplabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="emaillabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jklabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="ttllabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="statuslabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="pendidikanlabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jabatanlabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" pref="43" max="-2" attributes="0"/>
+                              <EmptySpace pref="28" max="32767" attributes="0"/>
+                              <Component id="lblnip" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="nidnlabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="namalabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="alamatlabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="telplabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="emaillabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jklabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="ttllabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="statuslabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="pendidikanlabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jabatanlabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="lblnip1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="nidnlabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="namalabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="alamatlabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="telplabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="emaillabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jklabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="ttllabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="statuslabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="pendidikanlabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jabatanlabel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="btnback" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -342,6 +385,61 @@
             <Component class="javax.swing.JLabel" name="jabatanlabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jLabel2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblnip1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="NIP :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="nidnlabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="NIDN :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="namalabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="NAMA :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="alamatlabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ALAMAT :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="telplabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TELEPON :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="emaillabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="EMAIL :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jklabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="JENIS KELAMIN :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="ttllabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TTL :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="statuslabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="STATUS :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="pendidikanlabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="PENDIDIKAN :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jabatanlabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="JABATAN :"/>
               </Properties>
             </Component>
           </SubComponents>
