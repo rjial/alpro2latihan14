@@ -11,6 +11,7 @@
 public class Main extends javax.swing.JFrame {
     Fungsi fungsi = new Fungsi();
     String nokrp = null;
+    
 
     /**
      * Creates new form Main
@@ -35,11 +36,23 @@ public class Main extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         txtuser = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
-        txtpass = new javax.swing.JTextField();
+        txtpass = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         btnexit = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         lblnip = new javax.swing.JLabel();
+        btnback = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        nidnlabel = new javax.swing.JLabel();
+        namalabel = new javax.swing.JLabel();
+        alamatlabel = new javax.swing.JLabel();
+        telplabel = new javax.swing.JLabel();
+        emaillabel = new javax.swing.JLabel();
+        jklabel = new javax.swing.JLabel();
+        ttllabel = new javax.swing.JLabel();
+        statuslabel = new javax.swing.JLabel();
+        pendidikanlabel = new javax.swing.JLabel();
+        jabatanlabel = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -127,7 +140,7 @@ public class Main extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
+                .addContainerGap(132, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,19 +161,92 @@ public class Main extends javax.swing.JFrame {
 
         lblnip.setText("asdasdasd");
 
+        btnback.setText("Back");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Selamat Datang");
+
+        nidnlabel.setText("jLabel2");
+
+        namalabel.setText("jLabel2");
+
+        alamatlabel.setText("jLabel2");
+
+        telplabel.setText("jLabel2");
+
+        emaillabel.setText("jLabel2");
+
+        jklabel.setText("jLabel2");
+
+        ttllabel.setText("jLabel2");
+
+        statuslabel.setText("jLabel2");
+
+        pendidikanlabel.setText("jLabel2");
+
+        jabatanlabel.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(lblnip)
-                .addGap(0, 539, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblnip, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(nidnlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(namalabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(alamatlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(telplabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(emaillabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jklabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ttllabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(statuslabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pendidikanlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jabatanlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(390, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
                 .addComponent(lblnip)
-                .addGap(0, 327, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(nidnlabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(namalabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(alamatlabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(telplabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(emaillabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jklabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ttllabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statuslabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pendidikanlabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jabatanlabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(btnback)
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel6, "beranda");
@@ -201,7 +287,13 @@ public class Main extends javax.swing.JFrame {
     private void jPanel6ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel6ComponentShown
         // TODO add your handling code here:
         lblnip.setText(nokrp);
+	
     }//GEN-LAST:event_jPanel6ComponentShown
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+	fungsi.loncatCard(jPanel1, "login");
+    }//GEN-LAST:event_btnbackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,16 +331,28 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel alamatlabel;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnback;
     private javax.swing.JButton btnexit;
+    private javax.swing.JLabel emaillabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel jabatanlabel;
+    private javax.swing.JLabel jklabel;
     private javax.swing.JLabel lblnip;
-    private javax.swing.JTextField txtpass;
+    private javax.swing.JLabel namalabel;
+    private javax.swing.JLabel nidnlabel;
+    private javax.swing.JLabel pendidikanlabel;
+    private javax.swing.JLabel statuslabel;
+    private javax.swing.JLabel telplabel;
+    private javax.swing.JLabel ttllabel;
+    private javax.swing.JPasswordField txtpass;
     private javax.swing.JTextField txtuser;
     // End of variables declaration//GEN-END:variables
 }
