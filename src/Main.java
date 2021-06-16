@@ -144,10 +144,8 @@ public class Main extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        nokrp = fungsi.login(txtuser.getText(), txtpass.getText());
-        if (nokrp != null) {
-            fungsi.loncatCard(jPanel10, "beranda");
-        }
+        
+        
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexitActionPerformed
