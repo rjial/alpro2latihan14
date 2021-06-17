@@ -434,7 +434,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        jPanel1.add(HalKelas, "card5");
+        jPanel1.add(HalKelas, "kelas");
 
         javax.swing.GroupLayout HalMahasiswaLayout = new javax.swing.GroupLayout(HalMahasiswa);
         HalMahasiswa.setLayout(HalMahasiswaLayout);
@@ -447,7 +447,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        jPanel1.add(HalMahasiswa, "card6");
+        jPanel1.add(HalMahasiswa, "mahasiswa");
 
         javax.swing.GroupLayout HalJadwalLayout = new javax.swing.GroupLayout(HalJadwal);
         HalJadwal.setLayout(HalJadwalLayout);
@@ -460,7 +460,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        jPanel1.add(HalJadwal, "card7");
+        jPanel1.add(HalJadwal, "jadwal");
 
         jMenu1.setText("File");
 
@@ -477,6 +477,11 @@ public class Main extends javax.swing.JFrame {
         jMenu2.setText("Navigasi");
 
         jMenuItem2.setText("Mata Kuliah");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuItem4.setText("Kelas");
@@ -567,6 +572,11 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
 	fungsi.loncatCard(jPanel1, "beranda");
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+	
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
