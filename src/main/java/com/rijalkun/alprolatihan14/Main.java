@@ -1,3 +1,5 @@
+package com.rijalkun.alprolatihan14;
+
 
 import java.sql.ResultSet;
 
