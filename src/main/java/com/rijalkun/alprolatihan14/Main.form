@@ -43,6 +43,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Mata Kuliah"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
@@ -609,7 +612,7 @@
         <Container class="javax.swing.JPanel" name="HalKelas">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card5"/>
+              <CardConstraints cardName="kelas"/>
             </Constraint>
           </Constraints>
 
@@ -629,7 +632,7 @@
         <Container class="javax.swing.JPanel" name="HalMahasiswa">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card6"/>
+              <CardConstraints cardName="mahasiswa"/>
             </Constraint>
           </Constraints>
 
@@ -649,7 +652,7 @@
         <Container class="javax.swing.JPanel" name="HalJadwal">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card7"/>
+              <CardConstraints cardName="jadwal"/>
             </Constraint>
           </Constraints>
 
