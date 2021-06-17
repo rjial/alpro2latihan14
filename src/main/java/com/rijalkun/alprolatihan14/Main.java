@@ -554,7 +554,7 @@ public class Main extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("JADWAL ANDA");
+        jLabel8.setText("JADWAL ANDAA");
 
         javax.swing.GroupLayout HalJadwalLayout = new javax.swing.GroupLayout(HalJadwal);
         HalJadwal.setLayout(HalJadwalLayout);
