@@ -1,8 +1,6 @@
 package com.rijalkun.alprolatihan14;
 
 
-package com.rijalkun.alprolatihan14;
-
 import java.awt.CardLayout;
 import java.awt.Container;
 import java.sql.DriverManager;
