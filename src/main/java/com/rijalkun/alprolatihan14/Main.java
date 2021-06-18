@@ -2,6 +2,7 @@ package com.rijalkun.alprolatihan14;
 
 
 import java.sql.ResultSet;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -23,6 +24,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+	jMenu2.setVisible(false);
         fungsi.loncatCard(jPanel1, nokrp);
     }
 
@@ -372,6 +374,12 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.add(HalWelcome, "beranda");
 
+        HalMatkul.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                HalMatkulComponentShown(evt);
+            }
+        });
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("MATKUL ANDA");
 
@@ -440,6 +448,12 @@ public class Main extends javax.swing.JFrame {
         );
 
         jPanel1.add(HalMatkul, "matkul");
+
+        HalKelas.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                HalKelasComponentShown(evt);
+            }
+        });
 
         jButton5.setText("Update");
 
@@ -750,6 +764,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         nokrp = fungsi.login(txtuser.getText(), String.valueOf(txtpass.getPassword()));
         if (nokrp != null) {
+	    jMenu2.setVisible(true);
             fungsi.loncatCard(jPanel1, "beranda");
         }
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -795,6 +810,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         txtuser.setText("");
         txtpass.setText("");
+	jMenu2.setVisible(false);
     }//GEN-LAST:event_HalLoginComponentShown
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -804,12 +820,14 @@ public class Main extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+	refreshTableMK();
 	fungsi.loncatCard(jPanel1, "matkul");
 	
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
+	refreshTableKelas();
 	fungsi.loncatCard(jPanel1, "kelas");
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
@@ -841,6 +859,48 @@ public class Main extends javax.swing.JFrame {
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu2ActionPerformed
+    public void refreshTableMK() {
+	DefaultTableModel model = (DefaultTableModel) tablematkul.getModel();
+	model.setRowCount(0);
+	ResultSet result = fungsi.executeResult("select * from mata_kuliah");
+	Object[] obj = new Object[3];
+	try {
+	    while (result.next()) {
+		obj[0] = result.getString("kode_matkul");
+		obj[1] = result.getString("periode");
+		obj[2] = result.getString("nama_matkul");
+		model.addRow(obj);
+	    }
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+    }
+    private void HalMatkulComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_HalMatkulComponentShown
+        // TODO add your handling code here:
+	refreshTableMK();
+    }//GEN-LAST:event_HalMatkulComponentShown
+    public void refreshTableKelas() {
+	DefaultTableModel model = (DefaultTableModel) tablekelas.getModel();
+	model.setRowCount(0);
+	ResultSet result = fungsi.executeResult("select * from kelas");
+	Object[] obj = new Object[5];
+	try {
+	    while (result.next()) {
+		obj[0] = result.getString("id_kelas");
+		obj[1] = result.getString("kelas");
+		obj[2] = result.getString("pertemuan");
+		obj[3] = result.getString("waktu");
+		obj[4] = result.getString("ruang");
+		model.addRow(obj);
+	    }
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+    }
+    private void HalKelasComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_HalKelasComponentShown
+        // TODO add your handling code here:
+	
+    }//GEN-LAST:event_HalKelasComponentShown
 
     /**
      * @param args the command line arguments
