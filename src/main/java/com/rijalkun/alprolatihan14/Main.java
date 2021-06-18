@@ -544,7 +544,7 @@ public class Main extends javax.swing.JFrame {
         });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("DATA ANDA");
+        jLabel7.setText("DATA Mahasiswa");
 
         tabledata.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -831,8 +831,36 @@ public class Main extends javax.swing.JFrame {
 	fungsi.loncatCard(jPanel1, "kelas");
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    public void refreshTableMhs() {
+	DefaultTableModel model = (DefaultTableModel) tabledata.getModel();
+	model.setRowCount(0);
+	ResultSet result = fungsi.executeResult("select * from mahasiswa");
+	Object[] obj = new Object[14];
+	try {
+	    while (result.next()) {
+		obj[0] = result.getString("nrp");
+		obj[1] = result.getString("nama_mahasiwa");
+		obj[2] = result.getString("prodi");
+		obj[3] = result.getString("status_masuk");
+		obj[4] = result.getString("jenis_kelamin");
+		obj[5] = result.getString("agama");
+		obj[6] = result.getString("alamat");
+		obj[7] = result.getString("email");
+		obj[8] = result.getString("no_hp");
+		obj[9] = result.getString("nama_ayah");
+		obj[10] = result.getString("no_ktp_ayah");
+		obj[11] = result.getString("nama_ibu");
+		obj[12] = result.getString("telepon_ortu");
+		obj[13] = result.getString("alamat_ortu");
+		model.addRow(obj);
+	    }
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+    }
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
+	refreshTableMhs();
 	fungsi.loncatCard(jPanel1, "mahasiswa");
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
