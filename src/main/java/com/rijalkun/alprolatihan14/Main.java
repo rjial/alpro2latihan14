@@ -87,6 +87,18 @@ public class Main extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablekelas = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        txtidkls = new javax.swing.JTextField();
+        txtkls = new javax.swing.JTextField();
+        txtpertemuan = new javax.swing.JTextField();
+        rblaki = new javax.swing.JRadioButton();
+        rbperempuan = new javax.swing.JRadioButton();
+        cbstatus = new javax.swing.JComboBox<>();
+        btntambah = new javax.swing.JButton();
         HalMahasiswa = new javax.swing.JPanel();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
@@ -488,6 +500,24 @@ public class Main extends javax.swing.JFrame {
             tablekelas.getColumnModel().getColumn(4).setHeaderValue("Jenis Kelamin");
         }
 
+        jLabel3.setText("ID Kelas");
+
+        jLabel4.setText("Kelas");
+
+        jLabel5.setText("Pertemuan");
+
+        jLabel9.setText("Status");
+
+        jLabel10.setText("Jenis Kelamin");
+
+        rblaki.setText("Laki-Laki");
+
+        rbperempuan.setText("Perempuan");
+
+        cbstatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aktif", "Tidak Aktif" }));
+
+        btntambah.setText("Tambah");
+
         javax.swing.GroupLayout HalKelasLayout = new javax.swing.GroupLayout(HalKelas);
         HalKelas.setLayout(HalKelasLayout);
         HalKelasLayout.setHorizontalGroup(
@@ -498,34 +528,76 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(HalKelasLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(HalKelasLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(HalKelasLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, HalKelasLayout.createSequentialGroup()
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addGap(65, 65, 65)
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(HalKelasLayout.createSequentialGroup()
+                                .addComponent(rblaki)
+                                .addGap(18, 18, 18)
+                                .addComponent(rbperempuan))
+                            .addComponent(cbstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtidkls, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                                .addComponent(txtkls)
+                                .addComponent(txtpertemuan))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, HalKelasLayout.createSequentialGroup()
+                        .addComponent(btntambah)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 587, Short.MAX_VALUE)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 18, Short.MAX_VALUE))
         );
         HalKelasLayout.setVerticalGroup(
             HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HalKelasLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6)
-                    .addComponent(jButton8)
-                    .addComponent(jButton7))
-                .addGap(43, 43, 43))
+                .addGap(18, 45, Short.MAX_VALUE)
+                .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(HalKelasLayout.createSequentialGroup()
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtidkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(txtkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(txtpertemuan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(cbstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(rblaki)
+                            .addComponent(rbperempuan))
+                        .addGap(15, 15, 15)
+                        .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton8)
+                            .addComponent(jButton7)
+                            .addComponent(jButton6)
+                            .addComponent(jButton5)
+                            .addComponent(btntambah))))
+                .addGap(66, 66, 66))
         );
 
         jPanel1.add(HalKelas, "kelas");
@@ -977,6 +1049,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnback;
     private javax.swing.JButton btnexit;
+    private javax.swing.JButton btntambah;
+    private javax.swing.JComboBox<String> cbstatus;
     private javax.swing.JLabel emaillabel;
     private javax.swing.JLabel emaillabel1;
     private javax.swing.JButton jButton1;
@@ -996,10 +1070,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -1028,6 +1107,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel nidnlabel1;
     private javax.swing.JLabel pendidikanlabel;
     private javax.swing.JLabel pendidikanlabel1;
+    private javax.swing.JRadioButton rblaki;
+    private javax.swing.JRadioButton rbperempuan;
     private javax.swing.JLabel statuslabel;
     private javax.swing.JLabel statuslabel1;
     private javax.swing.JTable tabledata;
@@ -1038,7 +1119,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel telplabel1;
     private javax.swing.JLabel ttllabel;
     private javax.swing.JLabel ttllabel1;
+    private javax.swing.JTextField txtidkls;
+    private javax.swing.JTextField txtkls;
     private javax.swing.JPasswordField txtpass;
+    private javax.swing.JTextField txtpertemuan;
     private javax.swing.JTextField txtuser;
     // End of variables declaration//GEN-END:variables
 }
