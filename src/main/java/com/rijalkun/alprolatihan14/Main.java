@@ -38,6 +38,7 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel5 = new javax.swing.JPanel();
+        jk = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         HalLogin = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -510,8 +511,10 @@ public class Main extends javax.swing.JFrame {
 
         jLabel10.setText("Jenis Kelamin");
 
+        jk.add(rblaki);
         rblaki.setText("Laki-Laki");
 
+        jk.add(rbperempuan);
         rbperempuan.setText("Perempuan");
 
         cbstatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aktif", "Tidak Aktif" }));
@@ -1097,6 +1100,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel jabatanlabel;
     private javax.swing.JLabel jabatanlabel1;
+    private javax.swing.ButtonGroup jk;
     private javax.swing.JLabel jklabel;
     private javax.swing.JLabel jklabel1;
     private javax.swing.JLabel lblnip;
