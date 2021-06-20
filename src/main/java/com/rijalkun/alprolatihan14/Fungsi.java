@@ -6,7 +6,13 @@ import java.awt.Container;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.HashMap;
 import javax.swing.JOptionPane;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -77,5 +83,15 @@ public class Fungsi {
     public void loncatCard(Container container, String cardName) {
         CardLayout cardLayout = (CardLayout) container.getLayout();
         cardLayout.show(container, cardName);
+    }
+    public void showReport(String url) {
+	try {
+	    HashMap param = new HashMap();
+	    JasperReport jspR = JasperCompileManager.compileReport(url);
+	    JasperPrint JPrint = JasperFillManager.fillReport(jspR, param, con);
+	    JasperViewer.viewReport(JPrint, false);
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
     }
 }
