@@ -26,6 +26,7 @@ public class Main extends javax.swing.JFrame {
     String nokrp = null;
     String noKls = null;
     String kd_matkul = null;
+    String nrp = null;
     
 
     /**
@@ -153,6 +154,8 @@ public class Main extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         boxagama = new javax.swing.JComboBox<>();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -372,7 +375,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(HalWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HalWelcomeLayout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
                         .addComponent(lblnip)
                         .addGap(18, 18, 18)
                         .addComponent(nidnlabel)
@@ -557,7 +560,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jButton17))
                         .addGap(18, 18, 18)
                         .addComponent(jButton3)))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
 
         jPanel1.add(HalMatkul, "matkul");
@@ -682,7 +685,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HalKelasLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 108, Short.MAX_VALUE)
+                .addGap(18, 114, Short.MAX_VALUE)
                 .addGroup(HalKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(HalKelasLayout.createSequentialGroup()
@@ -719,10 +722,22 @@ public class Main extends javax.swing.JFrame {
         jPanel1.add(HalKelas, "kelas");
 
         jButton9.setText("Update");
+        jButton9.setEnabled(false);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setText("Hapus");
+        jButton10.setEnabled(false);
 
         jButton11.setText("Clear");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("Back");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -745,6 +760,11 @@ public class Main extends javax.swing.JFrame {
                 "NRP", "Nama", "Prodi", "Status", "Jenis Kelamin", "Agama", "Alamat", "Email", "no HP", "Nama Ayah", "Ktp Ayah", "Nama Ibu", "Telp Ortu", "Alamat Ortu"
             }
         ));
+        tabledata.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabledataMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(tabledata);
 
         jLabel8.setText("Nama");
@@ -783,20 +803,24 @@ public class Main extends javax.swing.JFrame {
 
         boxagama.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---PIlih---", "Islam", "Kristen", "Khatolik", "Khonghucu", "Hindu" }));
 
+        jButton13.setText("Tambah");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Report");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout HalMahasiswaLayout = new javax.swing.GroupLayout(HalMahasiswa);
         HalMahasiswa.setLayout(HalMahasiswaLayout);
         HalMahasiswaLayout.setHorizontalGroup(
             HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HalMahasiswaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
             .addGroup(HalMahasiswaLayout.createSequentialGroup()
                 .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HalMahasiswaLayout.createSequentialGroup()
@@ -841,6 +865,20 @@ public class Main extends javax.swing.JFrame {
                                 .addComponent(jRadioButton2))
                             .addComponent(boxagama, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(77, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HalMahasiswaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
         HalMahasiswaLayout.setVerticalGroup(
             HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -907,13 +945,15 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel21)
                             .addComponent(txtalamatortu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton10)
                     .addComponent(jButton11)
-                    .addComponent(jButton12))
-                .addGap(27, 27, 27))
+                    .addComponent(jButton12)
+                    .addComponent(jButton13)
+                    .addComponent(jButton14))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jPanel1.add(HalMahasiswa, "mahasiswa");
@@ -1067,12 +1107,30 @@ public class Main extends javax.swing.JFrame {
     public void refreshTableMhs() {
 	DefaultTableModel model = (DefaultTableModel) tabledata.getModel();
 	model.setRowCount(0);
+	nrp = null;
+	txtnrp.setText("");
+	txtnama.setText("");
+	txtprodi.setText("");
+	txtstatus.setText("");
+	jRadioButton1.setSelected(false);
+	jRadioButton2.setSelected(false);
+	boxagama.setSelectedIndex(0);
+	txtalamat.setText("");
+	txtemail.setText("");
+	txtnohp.setText("");
+	txtnamaayah.setText("");
+	txtktpayah.setText("");
+	txtnamaibu.setText("");
+	txttelportu.setText("");
+	txtalamatortu.setText("");
+	jButton9.setEnabled(false);
+	jButton10.setEnabled(false);
 	ResultSet result = fungsi.executeResult("select * from mahasiswa");
 	Object[] obj = new Object[14];
 	try {
 	    while (result.next()) {
 		obj[0] = result.getString("nrp");
-		obj[1] = result.getString("nama_mahasiwa");
+		obj[1] = result.getString(1);
 		obj[2] = result.getString("prodi");
 		obj[3] = result.getString("status_masuk");
 		obj[4] = result.getString("jenis_kelamin");
@@ -1277,6 +1335,73 @@ public class Main extends javax.swing.JFrame {
 	refreshTableMK();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+	String jk = null;
+	if (jRadioButton1.isSelected()) {
+	    jk = "Laki-Laki";
+	} else {
+	    jk = "Perempuan";
+	}
+	int result = fungsi.executeUpdate("insert into mahasiswa values ('" + txtnrp.getText() + "', '" + txtnama.getText() + "', '" + txtprodi.getText() + "', '" + txtstatus.getText() + "', '" + jk + "', '" + boxagama.getSelectedItem().toString() + "', '" +txtalamat.getText() + "', '" + txtemail.getText() + "', '" + txtnohp.getText() + "', '" + txtnamaayah.getText() + "', '" + txtktpayah.getText() + "', '" + txtnamaibu.getText() + "', '" + txttelportu.getText() + "', '" + txtalamatortu.getText() + "')");
+	if (result > 0) {
+	    refreshTableMhs();
+	}
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void tabledataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabledataMouseClicked
+        // TODO add your handling code here:
+	DefaultTableModel model = (DefaultTableModel) tabledata.getModel();
+	nrp = model.getValueAt(tabledata.getSelectedRow(), 0).toString();
+	txtnrp.setText(model.getValueAt(tabledata.getSelectedRow(), 0).toString());
+	txtnama.setText(model.getValueAt(tabledata.getSelectedRow(), 1).toString());
+	txtprodi.setText(model.getValueAt(tabledata.getSelectedRow(), 2).toString());
+	txtstatus.setText(model.getValueAt(tabledata.getSelectedRow(), 3).toString());
+	String jk = model.getValueAt(tabledata.getSelectedRow(), 4).toString();
+	System.out.println(jk);
+	if ("Laki-Laki".equals(jk)) {
+	    jRadioButton1.setSelected(true);
+	    jRadioButton2.setSelected(false);
+	} else {
+	    jRadioButton2.setSelected(true);
+	    jRadioButton1.setSelected(false);
+	}
+	boxagama.setSelectedItem(model.getValueAt(tabledata.getSelectedRow(), 5).toString());
+	txtalamat.setText(model.getValueAt(tabledata.getSelectedRow(), 6).toString());
+	txtemail.setText(model.getValueAt(tabledata.getSelectedRow(), 7).toString());
+	txtnohp.setText(model.getValueAt(tabledata.getSelectedRow(), 8).toString());
+	txtnamaayah.setText(model.getValueAt(tabledata.getSelectedRow(), 9).toString());
+	txtktpayah.setText(model.getValueAt(tabledata.getSelectedRow(), 10).toString());
+	txtnamaibu.setText(model.getValueAt(tabledata.getSelectedRow(), 11).toString());
+	txttelportu.setText(model.getValueAt(tabledata.getSelectedRow(), 12).toString());
+	txtalamatortu.setText(model.getValueAt(tabledata.getSelectedRow(), 13).toString());
+	jButton9.setEnabled(true);
+	jButton10.setEnabled(true);
+    }//GEN-LAST:event_tabledataMouseClicked
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+	refreshTableMhs();
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+	String jk = null;
+	if (jRadioButton1.isSelected()) {
+	    jk = "Laki-Laki";
+	} else {
+	    jk = "Perempuan";
+	}
+	int result = fungsi.executeUpdate("update mahasiswa set nrp='" + txtnrp.getText() + "', nama_mahasiswa='" + txtnama.getText() + "', prodi='" + txtprodi.getText() + "', status_masuk='" + txtstatus.getText() + "', jenis_kelamin='" + jk + "', agama='" + boxagama.getSelectedItem().toString() + "', alamat='" + txtalamat.getText() + "', email='" + txtemail.getText() + "', no_hp='" + txtnohp.getText() + "', nama_ayah='" + txtnamaayah.getText() + "', no_ktp_ayah='" + txtktpayah.getText() + "', nama_ibu='" + txtnamaibu.getText() + "', telepon_ortu='" + txttelportu.getText() + "', alamat_ortu='" + txtalamatortu.getText() + "' where nrp='" + nrp + "'");
+	if (result > 0) {
+	    refreshTableMhs();
+	}
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1331,6 +1456,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
