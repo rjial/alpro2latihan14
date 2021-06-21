@@ -3,9 +3,11 @@ package com.rijalkun.alprolatihan14;
 
 import java.awt.CardLayout;
 import java.awt.Container;
+import java.io.File;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Base64;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -13,6 +15,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
+import org.apache.commons.io.FileUtils;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -93,5 +96,15 @@ public class Fungsi {
 	} catch (Exception e) {
 	    e.printStackTrace();
 	}
+    }
+    public String imgToBase64String(File file) {
+	String encodedString = null;
+	try {
+	    byte[] fileContent = FileUtils.readFileToByteArray(file);
+	    encodedString = Base64.getEncoder().encodeToString(fileContent);
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+	return encodedString;
     }
 }
