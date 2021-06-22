@@ -69,11 +69,11 @@ public class Fungsi {
         return result;
     }
     public String login(String username, String password) {
-        ResultSet result = executeResult("select * from dosen where nip_dosen='" + username + "' and PASSWORD='" + password + "'");
+        ResultSet result = executeResult("select * from orang where NOKRP='" + username + "' and PASSWORD='" + password + "'");
         String nokrp = null;
         try {
             if (result.next()) {
-                nokrp = result.getString("nip_dosen");
+                nokrp = result.getString("NOKRP");
             } else {
                 JOptionPane.showMessageDialog(null, "No KRP atau password salah");
             }
@@ -81,6 +81,28 @@ public class Fungsi {
             e.printStackTrace();
         }
         return nokrp;
+    }
+    public int getJabatan(String nokrp) {
+	int jabatan = 0;
+	ResultSet result = null;
+	try {
+	    result = executeResult("select * from admin where NOKRP='" + nokrp + "'");
+	    if (result.next()) {
+		jabatan = 1;
+	    }
+	    result = executeResult("select * from dosen where NOKRP='" + nokrp + "'");
+	    if (result.next()) {
+		jabatan = 2;
+	    }
+	    result = executeResult("select * from mahasiswa where NOKRP='" + nokrp + "'");
+	    if (result.next()) {
+		jabatan = 3;
+	    }
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+
+	return jabatan;
     }
     
     public void loncatCard(Container container, String cardName) {
