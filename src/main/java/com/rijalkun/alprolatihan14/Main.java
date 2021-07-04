@@ -112,14 +112,9 @@ public class Main extends javax.swing.JFrame {
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         diaTambahKelas = new javax.swing.JDialog();
-        txtidkls1 = new javax.swing.JTextField();
-        jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         txtkls1 = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        txtpertemuan1 = new javax.swing.JTextField();
-        jLabel41 = new javax.swing.JLabel();
-        jdWaktu1 = new com.toedter.calendar.JDateChooser();
         jLabel42 = new javax.swing.JLabel();
         txtRuang1 = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
@@ -127,6 +122,7 @@ public class Main extends javax.swing.JFrame {
         jButton18 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         cbxMKKelas = new javax.swing.JComboBox<>();
+        cbxDosenTmbhKelas = new javax.swing.JComboBox<>();
         diaTambahMhs = new javax.swing.JDialog();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
@@ -307,21 +303,17 @@ public class Main extends javax.swing.JFrame {
         txtEmailEditDosen = new javax.swing.JTextField();
         txtPassEditDosen = new javax.swing.JPasswordField();
         diaEditKelas = new javax.swing.JDialog();
-        txtidkls2 = new javax.swing.JTextField();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        txtkls2 = new javax.swing.JTextField();
-        jLabel93 = new javax.swing.JLabel();
-        txtpertemuan2 = new javax.swing.JTextField();
-        jLabel94 = new javax.swing.JLabel();
-        jdWaktu2 = new com.toedter.calendar.JDateChooser();
-        jLabel95 = new javax.swing.JLabel();
-        txtRuang2 = new javax.swing.JTextField();
-        jLabel96 = new javax.swing.JLabel();
-        jButton44 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
-        jLabel97 = new javax.swing.JLabel();
-        cbxMKKelas1 = new javax.swing.JComboBox<>();
+        jLabel41 = new javax.swing.JLabel();
+        txtkls3 = new javax.swing.JTextField();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        txtRuang3 = new javax.swing.JTextField();
+        jLabel100 = new javax.swing.JLabel();
+        jButton48 = new javax.swing.JButton();
+        jButton49 = new javax.swing.JButton();
+        jLabel38 = new javax.swing.JLabel();
+        cbxMKKelas2 = new javax.swing.JComboBox<>();
+        cbxDosenTmbhKelas1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         HalJadwal = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -644,17 +636,11 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel38.setText("Kode Kelas");
-
         jLabel39.setText("Kelas");
 
-        jLabel40.setText("Pertemuan");
+        jLabel40.setText("Dosen");
 
-        jLabel41.setText("Waktu");
-
-        jdWaktu1.setDateFormatString("EEEEE, d MMM yyyy");
-
-        jLabel42.setText("Ruang");
+        jLabel42.setText("Kode Kelas");
 
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel43.setText("Tambah Kelas");
@@ -684,31 +670,21 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(diaTambahKelasLayout.createSequentialGroup()
-                        .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel40)
-                            .addComponent(jLabel41)
-                            .addComponent(jLabel42))
-                        .addGap(65, 65, 65)
-                        .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtpertemuan1)
-                            .addComponent(jdWaktu1, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
-                            .addComponent(txtRuang1)))
-                    .addGroup(diaTambahKelasLayout.createSequentialGroup()
                         .addComponent(jButton23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton18))
                     .addGroup(diaTambahKelasLayout.createSequentialGroup()
-                        .addComponent(jLabel38)
-                        .addGap(66, 66, 66)
-                        .addComponent(txtidkls1))
-                    .addGroup(diaTambahKelasLayout.createSequentialGroup()
                         .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel3))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel40)
+                            .addComponent(jLabel42)
+                            .addComponent(jLabel39))
                         .addGap(60, 60, 60)
                         .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtkls1)
-                            .addComponent(cbxMKKelas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(txtRuang1)
+                            .addComponent(cbxMKKelas, 0, 252, Short.MAX_VALUE)
+                            .addComponent(cbxDosenTmbhKelas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         diaTambahKelasLayout.setVerticalGroup(
@@ -716,10 +692,6 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diaTambahKelasLayout.createSequentialGroup()
                 .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel38)
-                    .addComponent(txtidkls1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
                     .addComponent(txtkls1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -730,11 +702,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
-                    .addComponent(txtpertemuan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jdWaktu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cbxDosenTmbhKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(diaTambahKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel42)
@@ -1827,105 +1795,81 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel91.setText("Kode Kelas");
+        jLabel41.setText("Kelas");
 
-        jLabel92.setText("Kelas");
+        jLabel98.setText("Dosen");
 
-        jLabel93.setText("Pertemuan");
+        jLabel99.setText("Kode Kelas");
 
-        jLabel94.setText("Waktu");
+        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel100.setText("Tambah Kelas");
 
-        jdWaktu2.setDateFormatString("EEEEE, d MMM yyyy");
-
-        jLabel95.setText("Ruang");
-
-        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel96.setText("Edit Kelas");
-
-        jButton44.setText("Exit");
-        jButton44.addActionListener(new java.awt.event.ActionListener() {
+        jButton48.setText("Exit");
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton44ActionPerformed(evt);
+                jButton48ActionPerformed(evt);
             }
         });
 
-        jButton45.setText("Edit");
-        jButton45.addActionListener(new java.awt.event.ActionListener() {
+        jButton49.setText("Tambah");
+        jButton49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton45ActionPerformed(evt);
+                jButton49ActionPerformed(evt);
             }
         });
 
-        jLabel97.setText("Mata Kuliah");
+        jLabel38.setText("Mata Kuliah");
 
         javax.swing.GroupLayout diaEditKelasLayout = new javax.swing.GroupLayout(diaEditKelas.getContentPane());
         diaEditKelas.getContentPane().setLayout(diaEditKelasLayout);
         diaEditKelasLayout.setHorizontalGroup(
             diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel96, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel100, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(diaEditKelasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(diaEditKelasLayout.createSequentialGroup()
-                        .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel93)
-                            .addComponent(jLabel94)
-                            .addComponent(jLabel95))
-                        .addGap(65, 65, 65)
-                        .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtpertemuan2)
-                            .addComponent(jdWaktu2, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
-                            .addComponent(txtRuang2)))
-                    .addGroup(diaEditKelasLayout.createSequentialGroup()
-                        .addComponent(jButton44)
+                        .addComponent(jButton48)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton45))
-                    .addGroup(diaEditKelasLayout.createSequentialGroup()
-                        .addComponent(jLabel91)
-                        .addGap(66, 66, 66)
-                        .addComponent(txtidkls2))
+                        .addComponent(jButton49))
                     .addGroup(diaEditKelasLayout.createSequentialGroup()
                         .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel92)
-                            .addComponent(jLabel97))
+                            .addComponent(jLabel38)
+                            .addComponent(jLabel98)
+                            .addComponent(jLabel99)
+                            .addComponent(jLabel41))
                         .addGap(60, 60, 60)
                         .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtkls2)
-                            .addComponent(cbxMKKelas1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(txtkls3)
+                            .addComponent(txtRuang3)
+                            .addComponent(cbxMKKelas2, 0, 252, Short.MAX_VALUE)
+                            .addComponent(cbxDosenTmbhKelas1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         diaEditKelasLayout.setVerticalGroup(
             diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diaEditKelasLayout.createSequentialGroup()
-                .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel91)
-                    .addComponent(txtidkls2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel41)
+                    .addComponent(txtkls3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel92)
-                    .addComponent(txtkls2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel38)
+                    .addComponent(cbxMKKelas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel97)
-                    .addComponent(cbxMKKelas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel98)
+                    .addComponent(cbxDosenTmbhKelas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel93)
-                    .addComponent(txtpertemuan2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jdWaktu2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel94, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel95)
-                    .addComponent(txtRuang2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel99)
+                    .addComponent(txtRuang3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton44)
-                    .addComponent(jButton45))
+                    .addComponent(jButton48)
+                    .addComponent(jButton49))
                 .addContainerGap())
         );
 
@@ -2468,7 +2412,7 @@ public class Main extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "ID Kelas", "Kelas", "Pertemuan", "Ruang"
+                "Nama Kelas", "Kelas", "Dosen", "Kode Kelas"
             }
         ));
         tablekelas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3016,21 +2960,20 @@ public class Main extends javax.swing.JFrame {
 	
 	jButton5.setEnabled(false);
 	jButton6.setEnabled(false);
-	ResultSet result = fungsi.executeResult("select * from kelas inner join mata_kuliah on kelas.KODE_MK = mata_kuliah.KODE_MK");
-	Object[] obj = new Object[5];
+	ResultSet result = fungsi.executeResult("select kelas.NAMA_KELAS, mata_kuliah.NAMA_MK, orang.NAMA, kelas.KODE_KELAS from kelas inner join mata_kuliah on kelas.KODE_MK = mata_kuliah.KODE_MK inner join dosen on kelas.NOKRP = dosen.NOKRP inner join orang on dosen.NOKRP = orang.NOKRP");
+	Object[] obj = new Object[4];
 	try {
 	    while (result.next()) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		SimpleDateFormat outputDateFormat = new SimpleDateFormat("EEEEE, d MMM yyyy");
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		SimpleDateFormat outputDateFormat = new SimpleDateFormat("EEEEE, d MMM yyyy");
 //		LocalDate date = LocalDate.parse(result.getString("waktu"));
 //		System.out.println(result.getString("waktu"));
-		String strDate = outputDateFormat.format(dateFormat.parse(result.getString("waktu")));
+//		String strDate = outputDateFormat.format(dateFormat.parse(result.getString("waktu")));
 //		System.out.println(strDate);
-		obj[0] = result.getString("id_kelas");
-		obj[1] = result.getString("kelas");
-		obj[2] = result.getString("pertemuan");
-		obj[3] = strDate;
-		obj[4] = result.getString("ruang");
+		obj[0] = result.getString("NAMA_KELAS");
+		obj[1] = result.getString("NAMA_MK");
+		obj[2] = result.getString("NAMA");
+		obj[3] = result.getString("KODE_KELAS");
 		model.addRow(obj);
 	    }
 	} catch (Exception e) {
@@ -3054,6 +2997,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
 	diaTambahKelas.pack();
 	diaTambahKelas.setVisible(true);
+	refreshTableKelas();
 //	Date date = jdWaktu.getDate();
 //	SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
 //	String strDate = dateFormat.format(date);
@@ -3444,9 +3388,14 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-	Date date = jdWaktu1.getDate();
-	SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
-	String strDate = dateFormat.format(date);
+//	Date date = jdWaktu1.getDate();
+//	SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+//	String strDate = dateFormat.format(date);
+//	System.out.println(hmap.get(cbxMKKelas.getSelectedItem().toString()));
+	int result = fungsi.executeUpdate("INSERT INTO `kelas` (`NAMA_KELAS`, `KODE_MK`, `NOKRP`, `KODE_KELAS`) VALUES ('" + txtkls1.getText() +"', '" + hmap.get(cbxMKKelas.getSelectedItem().toString()) +"', '" + hmDosen.get(cbxDosenTmbhKelas.getSelectedItem().toString()) + "', '" + txtRuang1.getText() +"')");
+	if (result > 0) {
+	    diaTambahKelas.setVisible(false);
+	}
 //	if (validateKelas()) {
 //	    int result = fungsi.executeUpdate("insert into kelas values ('" + txtkls1.getText() + "', '" + txtkls.getText() + "', '" + txtpertemuan.getText() + "', '" + strDate + "', '" + txtRuang.getText() + "')");
 //	    if (result > 0) {
@@ -3460,11 +3409,23 @@ public class Main extends javax.swing.JFrame {
 	ResultSet result = fungsi.executeResult("select * from mata_kuliah");
 	try {
 	    hmap.clear();
+	    cbxMKKelas.removeAllItems();
 	    while (result.next()) {
-		hmap.put(result.getString("NAMA_MK"), "KODE_MK");
+		hmap.put(result.getString("NAMA_MK"), result.getString("KODE_MK"));
 		cbxMKKelas.addItem(result.getString("NAMA_MK"));
 	    }
 	} catch (Exception e) {
+	}
+	ResultSet resultDosen = fungsi.executeResult("SELECT orang.NOKRP, orang.NAMA FROM orang inner join dosen on orang.NOKRP = dosen.NOKRP");
+	try {
+	    hmDosen.clear();
+	    cbxDosenJadwal.removeAllItems();
+	    while (resultDosen.next()) {
+		hmDosen.put(resultDosen.getString("NAMA"), resultDosen.getString("NOKRP"));
+		cbxDosenTmbhKelas.addItem(resultDosen.getString("NAMA"));
+	    }
+	} catch (Exception e) {
+	    e.printStackTrace();
 	}
     }//GEN-LAST:event_diaTambahKelasComponentShown
 
@@ -3837,13 +3798,13 @@ public class Main extends javax.swing.JFrame {
 	diaEditDosen.setVisible(false);
     }//GEN-LAST:event_jButton46ActionPerformed
 
-    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton44ActionPerformed
+    }//GEN-LAST:event_jButton48ActionPerformed
 
-    private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
+    private void jButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton45ActionPerformed
+    }//GEN-LAST:event_jButton49ActionPerformed
 
     private void diaEditKelasComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_diaEditKelasComponentShown
         // TODO add your handling code here:
@@ -3964,6 +3925,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbxDosenJadwal;
     private javax.swing.JComboBox<String> cbxDosenJadwal1;
+    private javax.swing.JComboBox<String> cbxDosenTmbhKelas;
+    private javax.swing.JComboBox<String> cbxDosenTmbhKelas1;
     private javax.swing.JComboBox<String> cbxJAEditDosen;
     private javax.swing.JComboBox<String> cbxJATmbhDosen;
     private javax.swing.JComboBox<String> cbxKelasJadwal;
@@ -3971,7 +3934,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbxMKJadwal;
     private javax.swing.JComboBox<String> cbxMKJadwal1;
     private javax.swing.JComboBox<String> cbxMKKelas;
-    private javax.swing.JComboBox<String> cbxMKKelas1;
+    private javax.swing.JComboBox<String> cbxMKKelas2;
     private javax.swing.JComboBox<String> cbxPTEditDosen;
     private javax.swing.JComboBox<String> cbxPTTmbhDosen;
     private javax.swing.JComboBox<String> cbxRuangJadwal;
@@ -4042,10 +4005,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
     private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
     private javax.swing.JButton jButton47;
+    private javax.swing.JButton jButton48;
+    private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -4059,6 +4022,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
     private javax.swing.JLabel jLabel103;
@@ -4163,13 +4127,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
-    private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -4205,8 +4164,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel jabatanlabel;
     private javax.swing.JLabel jabatanlabel1;
-    private com.toedter.calendar.JDateChooser jdWaktu1;
-    private com.toedter.calendar.JDateChooser jdWaktu2;
     private javax.swing.ButtonGroup jk;
     private javax.swing.JLabel jklabel;
     private javax.swing.JLabel jklabel1;
@@ -4261,17 +4218,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtPeriodeJadwal;
     private javax.swing.JTextField txtPeriodeJadwal1;
     private javax.swing.JTextField txtRuang1;
-    private javax.swing.JTextField txtRuang2;
+    private javax.swing.JTextField txtRuang3;
     private javax.swing.JTextField txtalamat1;
     private javax.swing.JTextField txtalamat2;
     private javax.swing.JTextField txtalamatortu1;
     private javax.swing.JTextField txtalamatortu2;
     private javax.swing.JTextField txtemail1;
     private javax.swing.JTextField txtemail2;
-    private javax.swing.JTextField txtidkls1;
-    private javax.swing.JTextField txtidkls2;
     private javax.swing.JTextField txtkls1;
-    private javax.swing.JTextField txtkls2;
+    private javax.swing.JTextField txtkls3;
     private javax.swing.JTextField txtktpayah1;
     private javax.swing.JTextField txtktpayah2;
     private javax.swing.JTextField txtnama1;
@@ -4285,8 +4240,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtnrp1;
     private javax.swing.JTextField txtnrp2;
     private javax.swing.JPasswordField txtpass;
-    private javax.swing.JTextField txtpertemuan1;
-    private javax.swing.JTextField txtpertemuan2;
     private javax.swing.JTextField txttelportu1;
     private javax.swing.JTextField txttelportu2;
     private javax.swing.JTextField txtuser;

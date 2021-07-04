@@ -350,38 +350,24 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtpertemuan1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jdWaktu1" alignment="0" pref="252" max="32767" attributes="0"/>
-                              <Component id="txtRuang1" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="jButton23" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jButton18" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                          <Component id="txtidkls1" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txtkls1" max="32767" attributes="0"/>
-                              <Component id="cbxMKKelas" max="32767" attributes="0"/>
+                              <Component id="txtRuang1" max="32767" attributes="0"/>
+                              <Component id="cbxMKKelas" pref="252" max="32767" attributes="0"/>
+                              <Component id="cbxDosenTmbhKelas" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -395,11 +381,6 @@
                   <Component id="jLabel43" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtidkls1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtkls1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -411,12 +392,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtpertemuan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jdWaktu1" max="32767" attributes="0"/>
-                      <Component id="jLabel41" max="32767" attributes="0"/>
+                      <Component id="cbxDosenTmbhKelas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -434,13 +410,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="txtidkls1">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel38">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Kode Kelas"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel39">
           <Properties>
             <Property name="text" type="java.lang.String" value="Kelas"/>
@@ -450,24 +419,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel40">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pertemuan"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtpertemuan1">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel41">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Waktu"/>
-          </Properties>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jdWaktu1">
-          <Properties>
-            <Property name="dateFormatString" type="java.lang.String" value="EEEEE, d MMM yyyy"/>
+            <Property name="text" type="java.lang.String" value="Dosen"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel42">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ruang"/>
+            <Property name="text" type="java.lang.String" value="Kode Kelas"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtRuang1">
@@ -500,6 +457,16 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="cbxMKKelas">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbxDosenTmbhKelas">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
@@ -2463,42 +2430,28 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jLabel96" alignment="0" max="32767" attributes="0"/>
+              <Component id="jLabel100" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel93" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel94" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel95" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtpertemuan2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jdWaktu2" alignment="0" pref="252" max="32767" attributes="0"/>
-                              <Component id="txtRuang2" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton44" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton48" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton45" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel91" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                          <Component id="txtidkls2" max="32767" attributes="0"/>
+                          <Component id="jButton49" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel92" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel97" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel98" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel99" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtkls2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cbxMKKelas1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtkls3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtRuang3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cbxMKKelas2" alignment="0" pref="252" max="32767" attributes="0"/>
+                              <Component id="cbxDosenTmbhKelas1" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -2509,41 +2462,31 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="jLabel96" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="jLabel100" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel91" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtidkls2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtkls3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel92" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtkls2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbxMKKelas2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel97" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbxMKKelas1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbxDosenTmbhKelas1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel93" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtpertemuan2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jdWaktu2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel94" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel95" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtRuang2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtRuang3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton44" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton45" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton48" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton49" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -2551,72 +2494,63 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="txtidkls2">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel91">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Kode Kelas"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel92">
+        <Component class="javax.swing.JLabel" name="jLabel41">
           <Properties>
             <Property name="text" type="java.lang.String" value="Kelas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtkls2">
+        <Component class="javax.swing.JTextField" name="txtkls3">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel93">
+        <Component class="javax.swing.JLabel" name="jLabel98">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pertemuan"/>
+            <Property name="text" type="java.lang.String" value="Dosen"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtpertemuan2">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel94">
+        <Component class="javax.swing.JLabel" name="jLabel99">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Waktu"/>
+            <Property name="text" type="java.lang.String" value="Kode Kelas"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jdWaktu2">
-          <Properties>
-            <Property name="dateFormatString" type="java.lang.String" value="EEEEE, d MMM yyyy"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtRuang3">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel95">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ruang"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtRuang2">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel96">
+        <Component class="javax.swing.JLabel" name="jLabel100">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Edit Kelas"/>
+            <Property name="text" type="java.lang.String" value="Tambah Kelas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton44">
+        <Component class="javax.swing.JButton" name="jButton48">
           <Properties>
             <Property name="text" type="java.lang.String" value="Exit"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton44ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton48ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton45">
+        <Component class="javax.swing.JButton" name="jButton49">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Edit"/>
+            <Property name="text" type="java.lang.String" value="Tambah"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton45ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton49ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel97">
+        <Component class="javax.swing.JLabel" name="jLabel38">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mata Kuliah"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbxMKKelas1">
+        <Component class="javax.swing.JComboBox" name="cbxMKKelas2">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbxDosenTmbhKelas1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
@@ -3695,10 +3629,10 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
-                        <Column editable="true" title="ID Kelas" type="java.lang.Object"/>
+                        <Column editable="true" title="Nama Kelas" type="java.lang.Object"/>
                         <Column editable="true" title="Kelas" type="java.lang.Object"/>
-                        <Column editable="true" title="Pertemuan" type="java.lang.Object"/>
-                        <Column editable="true" title="Ruang" type="java.lang.Object"/>
+                        <Column editable="true" title="Dosen" type="java.lang.Object"/>
+                        <Column editable="true" title="Kode Kelas" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
