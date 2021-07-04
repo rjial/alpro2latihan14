@@ -247,6 +247,20 @@ public class Main extends javax.swing.JFrame {
         cbxRuangJadwal1 = new javax.swing.JComboBox<>();
         jMenuItem6 = new javax.swing.JMenuItem();
         jDialog3 = new javax.swing.JDialog();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel118 = new javax.swing.JLabel();
+        txtnmkls = new javax.swing.JTextField();
+        txtkdmk = new javax.swing.JTextField();
+        txtnokrp = new javax.swing.JTextField();
+        txtdosnokrp = new javax.swing.JTextField();
+        txtkdkls = new javax.swing.JTextField();
+        btntmbh = new javax.swing.JButton();
+        btnupdt = new javax.swing.JButton();
+        btnhps = new javax.swing.JButton();
+        btnclr = new javax.swing.JButton();
         diaTambahDosen = new javax.swing.JDialog();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
@@ -1469,15 +1483,85 @@ public class Main extends javax.swing.JFrame {
 
         jDialog3.setModal(true);
 
+        jLabel98.setText("Nama Kelas");
+
+        jLabel99.setText("Kode Mata Kuliah");
+
+        jLabel100.setText("No KRP");
+
+        jLabel117.setText("Dosen No KRP");
+
+        jLabel118.setText("Kode Kelas");
+
+        btntmbh.setText("Tambah");
+
+        btnupdt.setText("Update");
+
+        btnhps.setText("Hapus");
+
+        btnclr.setText("Clear");
+
         javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
         jDialog3.getContentPane().setLayout(jDialog3Layout);
         jDialog3Layout.setHorizontalGroup(
             jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 368, Short.MAX_VALUE)
+            .addGroup(jDialog3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog3Layout.createSequentialGroup()
+                        .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel98)
+                            .addComponent(jLabel99)
+                            .addComponent(jLabel100)
+                            .addComponent(jLabel117)
+                            .addComponent(jLabel118))
+                        .addGap(35, 35, 35)
+                        .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtnmkls)
+                            .addComponent(txtkdmk)
+                            .addComponent(txtnokrp)
+                            .addComponent(txtdosnokrp)
+                            .addComponent(txtkdkls, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)))
+                    .addGroup(jDialog3Layout.createSequentialGroup()
+                        .addComponent(btntmbh)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnupdt)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnhps)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnclr)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDialog3Layout.setVerticalGroup(
             jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(jDialog3Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel98)
+                    .addComponent(txtnmkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel99)
+                    .addComponent(txtkdmk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel100)
+                    .addComponent(txtnokrp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel117)
+                    .addComponent(txtdosnokrp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel118)
+                    .addComponent(txtkdkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btntmbh)
+                    .addComponent(btnupdt)
+                    .addComponent(btnhps)
+                    .addComponent(btnclr))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
         diaTambahDosen.setModal(true);
@@ -2028,7 +2112,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "NIP", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed", 1, 14), new java.awt.Color(102, 102, 102))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, null, null, null, new java.awt.Font("Tw Cen MT Condensed", 1, 14), new java.awt.Color(102, 102, 102))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -2047,7 +2131,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Password", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed", 1, 14), new java.awt.Color(102, 102, 102))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, null, null, null, new java.awt.Font("Tw Cen MT Condensed", 1, 14), new java.awt.Color(102, 102, 102))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -2462,13 +2546,13 @@ public class Main extends javax.swing.JFrame {
 
         tablekelas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID Kelas", "Kelas", "Pertemuan", "Ruang"
+                "Nama Kelas", "Kode Mata Kuliah", "No KRP", "Dosen No KRP", "Kode Kelas"
             }
         ));
         tablekelas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3959,8 +4043,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnTambahDosen;
     private javax.swing.JButton btnTambahJadwal;
     private javax.swing.JButton btnback;
+    private javax.swing.JButton btnclr;
     private javax.swing.JButton btnexit;
+    private javax.swing.JButton btnhps;
     private javax.swing.JButton btntambah;
+    private javax.swing.JButton btntmbh;
+    private javax.swing.JButton btnupdt;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbxDosenJadwal;
     private javax.swing.JComboBox<String> cbxDosenJadwal1;
@@ -4059,6 +4147,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
     private javax.swing.JLabel jLabel103;
@@ -4076,6 +4165,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -4170,6 +4261,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -4266,10 +4359,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtalamat2;
     private javax.swing.JTextField txtalamatortu1;
     private javax.swing.JTextField txtalamatortu2;
+    private javax.swing.JTextField txtdosnokrp;
     private javax.swing.JTextField txtemail1;
     private javax.swing.JTextField txtemail2;
     private javax.swing.JTextField txtidkls1;
     private javax.swing.JTextField txtidkls2;
+    private javax.swing.JTextField txtkdkls;
+    private javax.swing.JTextField txtkdmk;
     private javax.swing.JTextField txtkls1;
     private javax.swing.JTextField txtkls2;
     private javax.swing.JTextField txtktpayah1;
@@ -4280,8 +4376,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtnamaayah2;
     private javax.swing.JTextField txtnamaibu1;
     private javax.swing.JTextField txtnamaibu2;
+    private javax.swing.JTextField txtnmkls;
     private javax.swing.JTextField txtnohp1;
     private javax.swing.JTextField txtnohp2;
+    private javax.swing.JTextField txtnokrp;
     private javax.swing.JTextField txtnrp1;
     private javax.swing.JTextField txtnrp2;
     private javax.swing.JPasswordField txtpass;
