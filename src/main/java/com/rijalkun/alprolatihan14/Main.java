@@ -243,6 +243,20 @@ public class Main extends javax.swing.JFrame {
         cbxRuangJadwal1 = new javax.swing.JComboBox<>();
         jMenuItem6 = new javax.swing.JMenuItem();
         jDialog3 = new javax.swing.JDialog();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel118 = new javax.swing.JLabel();
+        txtnmkls = new javax.swing.JTextField();
+        txtkdmk = new javax.swing.JTextField();
+        txtnokrp = new javax.swing.JTextField();
+        txtdosnokrp = new javax.swing.JTextField();
+        txtkdkls = new javax.swing.JTextField();
+        btntmbh = new javax.swing.JButton();
+        btnupdt = new javax.swing.JButton();
+        btnhps = new javax.swing.JButton();
+        btnclr = new javax.swing.JButton();
         diaTambahDosen = new javax.swing.JDialog();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
@@ -305,10 +319,10 @@ public class Main extends javax.swing.JFrame {
         diaEditKelas = new javax.swing.JDialog();
         jLabel41 = new javax.swing.JLabel();
         txtkls3 = new javax.swing.JTextField();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
+        jLabel119 = new javax.swing.JLabel();
+        jLabel120 = new javax.swing.JLabel();
         txtRuang3 = new javax.swing.JTextField();
-        jLabel100 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
         jButton48 = new javax.swing.JButton();
         jButton49 = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
@@ -384,16 +398,22 @@ public class Main extends javax.swing.JFrame {
         btntambah = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         HalMahasiswa = new javax.swing.JPanel();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tabledata = new javax.swing.JTable();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
         jLabel28 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jButton13 = new javax.swing.JButton();
+        filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(10, 0));
+        jButton9 = new javax.swing.JButton();
+        filler10 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(10, 0));
+        jButton10 = new javax.swing.JButton();
+        filler11 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(10, 0));
+        jButton11 = new javax.swing.JButton();
+        filler12 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(10, 0));
+        jButton14 = new javax.swing.JButton();
+        filler13 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(10, 0));
+        jButton12 = new javax.swing.JButton();
         HalDosen = new javax.swing.JPanel();
         jLabel80 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -1437,15 +1457,85 @@ public class Main extends javax.swing.JFrame {
 
         jDialog3.setModal(true);
 
+        jLabel98.setText("Nama Kelas");
+
+        jLabel99.setText("Kode Mata Kuliah");
+
+        jLabel100.setText("No KRP");
+
+        jLabel117.setText("Dosen No KRP");
+
+        jLabel118.setText("Kode Kelas");
+
+        btntmbh.setText("Tambah");
+
+        btnupdt.setText("Update");
+
+        btnhps.setText("Hapus");
+
+        btnclr.setText("Clear");
+
         javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
         jDialog3.getContentPane().setLayout(jDialog3Layout);
         jDialog3Layout.setHorizontalGroup(
             jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 368, Short.MAX_VALUE)
+            .addGroup(jDialog3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog3Layout.createSequentialGroup()
+                        .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel98)
+                            .addComponent(jLabel99)
+                            .addComponent(jLabel100)
+                            .addComponent(jLabel117)
+                            .addComponent(jLabel118))
+                        .addGap(35, 35, 35)
+                        .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtnmkls)
+                            .addComponent(txtkdmk)
+                            .addComponent(txtnokrp)
+                            .addComponent(txtdosnokrp)
+                            .addComponent(txtkdkls, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)))
+                    .addGroup(jDialog3Layout.createSequentialGroup()
+                        .addComponent(btntmbh)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnupdt)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnhps)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnclr)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDialog3Layout.setVerticalGroup(
             jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(jDialog3Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel98)
+                    .addComponent(txtnmkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel99)
+                    .addComponent(txtkdmk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel100)
+                    .addComponent(txtnokrp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel117)
+                    .addComponent(txtdosnokrp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel118)
+                    .addComponent(txtkdkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btntmbh)
+                    .addComponent(btnupdt)
+                    .addComponent(btnhps)
+                    .addComponent(btnclr))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
         diaTambahDosen.setModal(true);
@@ -1796,13 +1886,19 @@ public class Main extends javax.swing.JFrame {
         });
 
         jLabel41.setText("Kelas");
+        diaEditKelas.getContentPane().add(jLabel41, java.awt.BorderLayout.CENTER);
+        diaEditKelas.getContentPane().add(txtkls3, java.awt.BorderLayout.PAGE_START);
 
-        jLabel98.setText("Dosen");
+        jLabel119.setText("Dosen");
+        diaEditKelas.getContentPane().add(jLabel119, java.awt.BorderLayout.PAGE_END);
 
-        jLabel99.setText("Kode Kelas");
+        jLabel120.setText("Kode Kelas");
+        diaEditKelas.getContentPane().add(jLabel120, java.awt.BorderLayout.LINE_END);
+        diaEditKelas.getContentPane().add(txtRuang3, java.awt.BorderLayout.LINE_START);
 
-        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel100.setText("Tambah Kelas");
+        jLabel121.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel121.setText("Tambah Kelas");
+        diaEditKelas.getContentPane().add(jLabel121, java.awt.BorderLayout.CENTER);
 
         jButton48.setText("Exit");
         jButton48.addActionListener(new java.awt.event.ActionListener() {
@@ -1810,6 +1906,7 @@ public class Main extends javax.swing.JFrame {
                 jButton48ActionPerformed(evt);
             }
         });
+        diaEditKelas.getContentPane().add(jButton48, java.awt.BorderLayout.CENTER);
 
         jButton49.setText("Tambah");
         jButton49.addActionListener(new java.awt.event.ActionListener() {
@@ -1817,61 +1914,14 @@ public class Main extends javax.swing.JFrame {
                 jButton49ActionPerformed(evt);
             }
         });
+        diaEditKelas.getContentPane().add(jButton49, java.awt.BorderLayout.CENTER);
 
         jLabel38.setText("Mata Kuliah");
+        diaEditKelas.getContentPane().add(jLabel38, java.awt.BorderLayout.CENTER);
 
-        javax.swing.GroupLayout diaEditKelasLayout = new javax.swing.GroupLayout(diaEditKelas.getContentPane());
-        diaEditKelas.getContentPane().setLayout(diaEditKelasLayout);
-        diaEditKelasLayout.setHorizontalGroup(
-            diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel100, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(diaEditKelasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(diaEditKelasLayout.createSequentialGroup()
-                        .addComponent(jButton48)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton49))
-                    .addGroup(diaEditKelasLayout.createSequentialGroup()
-                        .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel38)
-                            .addComponent(jLabel98)
-                            .addComponent(jLabel99)
-                            .addComponent(jLabel41))
-                        .addGap(60, 60, 60)
-                        .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtkls3)
-                            .addComponent(txtRuang3)
-                            .addComponent(cbxMKKelas2, 0, 252, Short.MAX_VALUE)
-                            .addComponent(cbxDosenTmbhKelas1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
-        );
-        diaEditKelasLayout.setVerticalGroup(
-            diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diaEditKelasLayout.createSequentialGroup()
-                .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel41)
-                    .addComponent(txtkls3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel38)
-                    .addComponent(cbxMKKelas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel98)
-                    .addComponent(cbxDosenTmbhKelas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel99)
-                    .addComponent(txtRuang3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(diaEditKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton48)
-                    .addComponent(jButton49))
-                .addContainerGap())
-        );
+        diaEditKelas.getContentPane().add(cbxMKKelas2, java.awt.BorderLayout.CENTER);
+
+        diaEditKelas.getContentPane().add(cbxDosenTmbhKelas1, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -2480,31 +2530,6 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.add(HalKelas, "kelas");
 
-        jButton9.setText("Update");
-        jButton9.setEnabled(false);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-
-        jButton10.setText("Hapus");
-        jButton10.setEnabled(false);
-
-        jButton11.setText("Clear");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-
-        jButton12.setText("Back");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("DATA Mahasiswa");
 
@@ -2526,12 +2551,40 @@ public class Main extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(tabledata);
 
+        jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.LINE_AXIS));
+
         jButton13.setText("Tambah");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
+        jPanel9.add(jButton13);
+        jPanel9.add(filler9);
+
+        jButton9.setText("Update");
+        jButton9.setEnabled(false);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(jButton9);
+        jPanel9.add(filler10);
+
+        jButton10.setText("Hapus");
+        jButton10.setEnabled(false);
+        jPanel9.add(jButton10);
+        jPanel9.add(filler11);
+
+        jButton11.setText("Clear");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(jButton11);
+        jPanel9.add(filler12);
 
         jButton14.setText("Report");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -2539,6 +2592,16 @@ public class Main extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
+        jPanel9.add(jButton14);
+        jPanel9.add(filler13);
+
+        jButton12.setText("Back");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(jButton12);
 
         javax.swing.GroupLayout HalMahasiswaLayout = new javax.swing.GroupLayout(HalMahasiswa);
         HalMahasiswa.setLayout(HalMahasiswaLayout);
@@ -2547,23 +2610,11 @@ public class Main extends javax.swing.JFrame {
             .addGroup(HalMahasiswaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1163, Short.MAX_VALUE)
                     .addGroup(HalMahasiswaLayout.createSequentialGroup()
-                        .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(HalMahasiswaLayout.createSequentialGroup()
-                                .addComponent(jButton13)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton14)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 681, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1163, Short.MAX_VALUE))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HalMahasiswaLayout.createSequentialGroup()
@@ -2576,16 +2627,9 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HalMahasiswaLayout.createSequentialGroup()
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton12)
-                    .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton9)
-                        .addComponent(jButton10)
-                        .addComponent(jButton11)
-                        .addComponent(jButton13)
-                        .addComponent(jButton14)))
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(HalMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(HalMahasiswaLayout.createSequentialGroup()
@@ -2640,6 +2684,11 @@ public class Main extends javax.swing.JFrame {
 
         jButton38.setText("Hapus");
         jButton38.setEnabled(false);
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton38);
         jPanel8.add(filler3);
 
@@ -3810,6 +3859,17 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_diaEditKelasComponentShown
 
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        // TODO add your handling code here:
+	int result = fungsi.executeUpdate("delete from dosen where NOKRP='" + nip + "'");
+	if (result > 0) {
+	    int result2 = fungsi.executeUpdate("delete from orang where NOKRP='" + nip + "'");
+	    if (result2 > 0) {
+		refreshTableDosen();
+	    }
+	}
+    }//GEN-LAST:event_jButton38ActionPerformed
+
     public void refreshTableJadwal() {
 	DefaultTableModel model = (DefaultTableModel) tblJadwal.getModel();
 	noJabatan = 0;
@@ -3920,8 +3980,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnTambahDosen;
     private javax.swing.JButton btnTambahJadwal;
     private javax.swing.JButton btnback;
+    private javax.swing.JButton btnclr;
     private javax.swing.JButton btnexit;
+    private javax.swing.JButton btnhps;
     private javax.swing.JButton btntambah;
+    private javax.swing.JButton btntmbh;
+    private javax.swing.JButton btnupdt;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbxDosenJadwal;
     private javax.swing.JComboBox<String> cbxDosenJadwal1;
@@ -3960,6 +4024,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel emaillabel;
     private javax.swing.JLabel emaillabel1;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.Box.Filler filler10;
+    private javax.swing.Box.Filler filler11;
+    private javax.swing.Box.Filler filler12;
+    private javax.swing.Box.Filler filler13;
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
     private javax.swing.Box.Filler filler4;
@@ -3967,6 +4035,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler6;
     private javax.swing.Box.Filler filler7;
     private javax.swing.Box.Filler filler8;
+    private javax.swing.Box.Filler filler9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -4040,7 +4109,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel120;
+    private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -4149,6 +4223,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
@@ -4223,8 +4298,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtalamat2;
     private javax.swing.JTextField txtalamatortu1;
     private javax.swing.JTextField txtalamatortu2;
+    private javax.swing.JTextField txtdosnokrp;
     private javax.swing.JTextField txtemail1;
     private javax.swing.JTextField txtemail2;
+    private javax.swing.JTextField txtkdkls;
+    private javax.swing.JTextField txtkdmk;
     private javax.swing.JTextField txtkls1;
     private javax.swing.JTextField txtkls3;
     private javax.swing.JTextField txtktpayah1;
@@ -4235,8 +4313,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtnamaayah2;
     private javax.swing.JTextField txtnamaibu1;
     private javax.swing.JTextField txtnamaibu2;
+    private javax.swing.JTextField txtnmkls;
     private javax.swing.JTextField txtnohp1;
     private javax.swing.JTextField txtnohp2;
+    private javax.swing.JTextField txtnokrp;
     private javax.swing.JTextField txtnrp1;
     private javax.swing.JTextField txtnrp2;
     private javax.swing.JPasswordField txtpass;
