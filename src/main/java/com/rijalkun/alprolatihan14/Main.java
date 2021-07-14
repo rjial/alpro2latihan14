@@ -2,6 +2,8 @@ package com.rijalkun.alprolatihan14;
 
 
 import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 //import com.formdev.flatlaf.FlatLightLaf;
 import java.time.format.DateTimeFormatter;  
 import java.time.LocalDateTime;    
@@ -4789,8 +4791,8 @@ public class Main extends javax.swing.JFrame {
 	if (userSelection == JFileChooser.APPROVE_OPTION) {
 	    File fileToSave = fileChooser.getSelectedFile();
 	    System.out.println(fileToSave.getAbsolutePath());
-	    System.out.println(tabledata.getColumnModel().getColumn(1).getHeaderValue().toString());
-	    fungsi.printPdf(tabledata, fileToSave.getAbsolutePath(), "Hello World");
+//	    System.out.println(tabledata.getColumnModel().getColumn(1).getHeaderValue().toString());
+	    fungsi.printPdf(tablekelas, fileToSave.getAbsolutePath(), "Hello World");
 	}
 	
     }//GEN-LAST:event_jButton33ActionPerformed
@@ -4890,7 +4892,8 @@ public class Main extends javax.swing.JFrame {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
 //                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-		    javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
+//		    javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
+		    javax.swing.UIManager.setLookAndFeel(new FlatLightLaf());
                     break;
                 }
             }

@@ -166,7 +166,8 @@ public class Fungsi {
 	    }
 	    for(int a = 0; a < rows; a++) {
 		for (int b = 0; b < columns; b++) {
-		    String namaRows = model.getValueAt(a, b).toString();
+//		    String namaRows = model.getValueAt(a, b).toString();
+		    String namaRows = table.getValueAt(a, b).toString();
 		    tablePdf.addCell(namaRows);
 		}
 	    }
