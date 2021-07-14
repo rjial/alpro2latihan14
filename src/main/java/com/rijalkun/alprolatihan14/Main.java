@@ -4908,30 +4908,33 @@ public class Main extends javax.swing.JFrame {
 	jButton32.setEnabled(false);
 	model.setRowCount(0);
 	ResultSet result = null;
-	switch (noJabatan) {
-	    case 1:
-		result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP");
-		break;
-	    case 2:
-		result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP where jadwal.NOKRP = '" + nokrp + "'");
-		break;
-	    case 3:
-		ResultSet resultMhsKelas = fungsi.executeResult("select NAMA_KELAS from ambil_kelas where NOKRP='" + nokrp + "'");
-		String kelasMhs = null;
-		try {
-		    if (resultMhsKelas.next()) {
-			kelasMhs = resultMhsKelas.getString("NAMA_KELAS");
-		    }
-		} catch (Exception e) {
-		    e.printStackTrace();
-		}	result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP where jadwal.NAMA_KELAS = '" + kelasMhs + "'");
-		break;
-	    default:
-		break;
-	}
+	
 	
 	Object[] row = new Object[11];
 	try {
+	    System.out.println(noJabatan);
+	    switch (noJabatan) {
+		case 1:
+		    result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP");
+		    break;
+		case 2:
+		    result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP where jadwal.NOKRP = '" + nokrp + "'");
+		    break;
+		case 3:
+		    ResultSet resultMhsKelas = fungsi.executeResult("select NAMA_KELAS from ambil_kelas where NOKRP='" + nokrp + "'");
+		    String kelasMhs = null;
+		    try {
+			if (resultMhsKelas.next()) {
+			    kelasMhs = resultMhsKelas.getString("NAMA_KELAS");
+			}
+		    } catch (Exception e) {
+			e.printStackTrace();
+		    }
+		    result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP where jadwal.NAMA_KELAS = '" + kelasMhs + "'");
+		    break;
+		default:
+		    break;
+	    }
 	    while (result.next()) {
 		row[0] = result.getString("ID");
 		row[1] = result.getString("NAMA_MK");
