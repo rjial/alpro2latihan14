@@ -4901,7 +4901,8 @@ public class Main extends javax.swing.JFrame {
 
     public void refreshTableJadwal() {
 	DefaultTableModel model = (DefaultTableModel) tblJadwal.getModel();
-	noJabatan = 0;
+//	noJabatan = 0;
+	noJadwal= 0;
 	tblJadwal.clearSelection();
 	jButton31.setEnabled(false);
 	jButton32.setEnabled(false);
@@ -5012,6 +5013,12 @@ public class Main extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Main().setVisible(true);
+//		System.out.println(this.getClass().);
+		try {
+		    Class c = Class.forName("com.rijalkun.alprolatihan14.Main");
+		    System.out.println("Package: "+c.getPackage()+"\nClass: "+c.getSimpleName()+"\nFull Identifier: "+c.getName());
+		} catch (Exception e) {
+		}
 //		FlatLightLaf.setup();
             }
         });
