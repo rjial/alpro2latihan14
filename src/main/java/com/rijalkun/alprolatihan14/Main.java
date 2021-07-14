@@ -36,6 +36,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.filechooser.FileFilter;
 import org.apache.commons.io.FileUtils;
 
 /*
@@ -3172,6 +3173,11 @@ public class Main extends javax.swing.JFrame {
         jPanel8.add(filler24);
 
         jButton40.setText("Cetak Report");
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton40);
         jPanel8.add(filler4);
 
@@ -3964,7 +3970,31 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-	fungsi.showReport(".\\src\\main\\java\\com\\rijalkun\\alprolatihan14\\reportmahasiswa.jrxml");
+//	fungsi.showReport(".\\src\\main\\java\\com\\rijalkun\\alprolatihan14\\reportmahasiswa.jrxml");
+	JFileChooser fileChooser = new JFileChooser();
+	fileChooser.setDialogTitle("Specify a file to save");
+	fileChooser.setFileFilter(new FileFilter() {
+
+	    public String getDescription() {
+		return "PDF Document (*.pdf)";
+	    }
+
+	    public boolean accept(File f) {
+		if (f.isDirectory()) {
+		    return true;
+		} else {
+		    String filename = f.getName().toLowerCase();
+		    return filename.endsWith(".pdf");
+		}
+	    }
+	});
+	int userSelection = fileChooser.showSaveDialog(this);
+	if (userSelection == JFileChooser.APPROVE_OPTION) {
+	    File fileToSave = fileChooser.getSelectedFile();
+	    System.out.println(fileToSave.getAbsolutePath());
+//	    System.out.println(tablekelas.getValueAt(0, 0));
+	    fungsi.printPdf(tabledata, fileToSave.getAbsolutePath(), "Mahasiswa");
+	}
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -3974,7 +4004,31 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
-	fungsi.showReport(".\\src\\main\\java\\com\\rijalkun\\alprolatihan14\\reportmatakuliah.jrxml");
+//	fungsi.showReport(".\\src\\main\\java\\com\\rijalkun\\alprolatihan14\\reportmatakuliah.jrxml");
+	JFileChooser fileChooser = new JFileChooser();
+	fileChooser.setDialogTitle("Specify a file to save");
+	fileChooser.setFileFilter(new FileFilter() {
+
+	    public String getDescription() {
+		return "PDF Document (*.pdf)";
+	    }
+
+	    public boolean accept(File f) {
+		if (f.isDirectory()) {
+		    return true;
+		} else {
+		    String filename = f.getName().toLowerCase();
+		    return filename.endsWith(".pdf");
+		}
+	    }
+	});
+	int userSelection = fileChooser.showSaveDialog(this);
+	if (userSelection == JFileChooser.APPROVE_OPTION) {
+	    File fileToSave = fileChooser.getSelectedFile();
+	    System.out.println(fileToSave.getAbsolutePath());
+//	    System.out.println(tablekelas.getValueAt(0, 0));
+	    fungsi.printPdf(tablematkul fileToSave.getAbsolutePath(), "Mata Kuliah");
+	}
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -4787,20 +4841,62 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
 	JFileChooser fileChooser = new JFileChooser();
 	fileChooser.setDialogTitle("Specify a file to save");
+	fileChooser.setFileFilter(new FileFilter() {
+
+	    public String getDescription() {
+		return "PDF Document (*.pdf)";
+	    }
+
+	    public boolean accept(File f) {
+		if (f.isDirectory()) {
+		    return true;
+		} else {
+		    String filename = f.getName().toLowerCase();
+		    return filename.endsWith(".pdf");
+		}
+	    }
+	});
 	int userSelection = fileChooser.showSaveDialog(this);
 	if (userSelection == JFileChooser.APPROVE_OPTION) {
 	    File fileToSave = fileChooser.getSelectedFile();
 	    System.out.println(fileToSave.getAbsolutePath());
-//	    System.out.println(tabledata.getColumnModel().getColumn(1).getHeaderValue().toString());
-	    fungsi.printPdf(tablekelas, fileToSave.getAbsolutePath(), "Hello World");
+//	    System.out.println(tablekelas.getValueAt(0, 0));
+	    fungsi.printPdf(tblJadwal, fileToSave.getAbsolutePath(), "Jadwal");
 	}
-	
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
         // TODO add your handling code here:
 	fungsi.loncatCard(jPanel1, "beranda");
     }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+        // TODO add your handling code here:
+	JFileChooser fileChooser = new JFileChooser();
+	fileChooser.setDialogTitle("Specify a file to save");
+	fileChooser.setFileFilter(new FileFilter() {
+
+	    public String getDescription() {
+		return "PDF Document (*.pdf)";
+	    }
+
+	    public boolean accept(File f) {
+		if (f.isDirectory()) {
+		    return true;
+		} else {
+		    String filename = f.getName().toLowerCase();
+		    return filename.endsWith(".pdf");
+		}
+	    }
+	});
+	int userSelection = fileChooser.showSaveDialog(this);
+	if (userSelection == JFileChooser.APPROVE_OPTION) {
+	    File fileToSave = fileChooser.getSelectedFile();
+	    System.out.println(fileToSave.getAbsolutePath());
+//	    System.out.println(tablekelas.getValueAt(0, 0));
+	    fungsi.printPdf(tblDosen fileToSave.getAbsolutePath(), "Dosen");
+	}
+    }//GEN-LAST:event_jButton40ActionPerformed
 
     public void refreshTableJadwal() {
 	DefaultTableModel model = (DefaultTableModel) tblJadwal.getModel();

@@ -5221,6 +5221,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cetak Report"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton40ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.Box$Filler" name="filler4">
                   <Properties>
