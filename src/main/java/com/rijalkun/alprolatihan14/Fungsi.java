@@ -157,10 +157,18 @@ public class Fungsi {
 	    document.add(para);
 	    float [] pointColumnWidths = {150F, 150F, 150F};
 	    int columns = model.getColumnCount();
+	    int rows = model.getRowCount();
 	    PdfPTable tablePdf = new PdfPTable(columns);
+	    tablePdf.setWidthPercentage(90f);
 	    for(int a = 0; a < columns; a++) {
 		String namaHeader = table.getColumnModel().getColumn(a).getHeaderValue().toString();
 		tablePdf.addCell(namaHeader);
+	    }
+	    for(int a = 0; a < rows; a++) {
+		for (int b = 0; b < columns; b++) {
+		    String namaRows = model.getValueAt(a, b).toString();
+		    tablePdf.addCell(namaRows);
+		}
 	    }
 	    document.add(tablePdf);
 	    document.close();

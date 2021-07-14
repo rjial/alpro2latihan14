@@ -2261,6 +2261,11 @@ public class Main extends javax.swing.JFrame {
         jPanel7.add(filler8);
 
         jButton34.setText("Back");
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton34);
 
         javax.swing.GroupLayout HalJadwalLayout = new javax.swing.GroupLayout(HalJadwal);
@@ -4136,6 +4141,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
+	diaEditMhs.setVisible(false);
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
@@ -4788,6 +4794,11 @@ public class Main extends javax.swing.JFrame {
 	}
 	
     }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        // TODO add your handling code here:
+	fungsi.loncatCard(jPanel1, "beranda");
+    }//GEN-LAST:event_jButton34ActionPerformed
 
     public void refreshTableJadwal() {
 	DefaultTableModel model = (DefaultTableModel) tblJadwal.getModel();
