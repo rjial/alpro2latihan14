@@ -5,6 +5,7 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Font.FontFamily;
+import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import java.awt.CardLayout;
 import java.awt.Container;
@@ -144,6 +145,7 @@ public class Fungsi {
 	DefaultTableModel model = (DefaultTableModel) table.getModel();
 	String dest = filename;
 	Document document = new Document();
+	document.setPageSize(PageSize.A4.rotate());
 	try {
 	    PdfWriter.getInstance(document, new FileOutputStream(dest));
 
@@ -151,11 +153,16 @@ public class Fungsi {
 	    Font font = new Font(FontFamily.HELVETICA, 20, Font.BOLD);
 	    Paragraph para = new Paragraph(judul, font);
 	    para.setAlignment(Element.ALIGN_CENTER);
+	    para.setSpacingAfter(50f);
 	    document.add(para);
 	    float [] pointColumnWidths = {150F, 150F, 150F};
 	    int columns = model.getColumnCount();
 	    PdfPTable tablePdf = new PdfPTable(columns);
-	    
+	    for(int a = 0; a < columns; a++) {
+		String namaHeader = table.getColumnModel().getColumn(a).getHeaderValue().toString();
+		tablePdf.addCell(namaHeader);
+	    }
+	    document.add(tablePdf);
 	    document.close();
 
 	} catch (Exception e) {

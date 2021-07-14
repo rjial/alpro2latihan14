@@ -4114,6 +4114,24 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
+	int open = jFileChooser1.showOpenDialog(null);
+	if (open == JFileChooser.APPROVE_OPTION) {
+	    File file = jFileChooser1.getSelectedFile();
+	    try {
+		Dimension dim = jLabel76.getSize();
+		BufferedImage img = ImageIO.read(file);
+		Image dimg = img.getScaledInstance(jLabel76.getWidth(), jLabel59.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon icon = new ImageIcon(dimg);
+		byte[] fileContent = FileUtils.readFileToByteArray(file);
+		base64image = Base64.getEncoder().encodeToString(fileContent);
+		jLabel76.setIcon(icon);
+		jLabel76.setPreferredSize(dim);
+		jLabel76.revalidate();
+		jLabel76.repaint();
+	    } catch (Exception e) {
+		JOptionPane.showMessageDialog(null, "ERROR : " + e.getMessage());
+	    }
+	}
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
@@ -4765,6 +4783,7 @@ public class Main extends javax.swing.JFrame {
 	if (userSelection == JFileChooser.APPROVE_OPTION) {
 	    File fileToSave = fileChooser.getSelectedFile();
 	    System.out.println(fileToSave.getAbsolutePath());
+	    System.out.println(tabledata.getColumnModel().getColumn(1).getHeaderValue().toString());
 	    fungsi.printPdf(tabledata, fileToSave.getAbsolutePath(), "Hello World");
 	}
 	
