@@ -4027,7 +4027,7 @@ public class Main extends javax.swing.JFrame {
 	    File fileToSave = fileChooser.getSelectedFile();
 	    System.out.println(fileToSave.getAbsolutePath());
 //	    System.out.println(tablekelas.getValueAt(0, 0));
-	    fungsi.printPdf(tablematkul fileToSave.getAbsolutePath(), "Mata Kuliah");
+	    fungsi.printPdf(tablematkul, fileToSave.getAbsolutePath(), "Mata Kuliah");
 	}
     }//GEN-LAST:event_jButton16ActionPerformed
 
@@ -4894,7 +4894,7 @@ public class Main extends javax.swing.JFrame {
 	    File fileToSave = fileChooser.getSelectedFile();
 	    System.out.println(fileToSave.getAbsolutePath());
 //	    System.out.println(tablekelas.getValueAt(0, 0));
-	    fungsi.printPdf(tblDosen fileToSave.getAbsolutePath(), "Dosen");
+	    fungsi.printPdf(tblDosen, fileToSave.getAbsolutePath(), "Dosen");
 	}
     }//GEN-LAST:event_jButton40ActionPerformed
 
