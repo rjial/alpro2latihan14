@@ -1,6 +1,11 @@
 package com.rijalkun.alprolatihan14;
 
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Font.FontFamily;
+import com.itextpdf.text.Paragraph;
 import java.awt.CardLayout;
 import java.awt.Container;
 import java.io.File;
@@ -16,7 +21,12 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
 import org.apache.commons.io.FileUtils;
-
+import com.itextpdf.text.pdf.PdfDocument; 
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter; 
+import java.io.FileOutputStream;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -30,6 +40,7 @@ import org.apache.commons.io.FileUtils;
 public class Fungsi {
     java.sql.Connection con = null;
     String namadb = "mahasiswa_sakti";
+    String nokrp = null;
     public Fungsi() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -128,5 +139,29 @@ public class Fungsi {
 	    e.printStackTrace();
 	}
 	return encodedString;
+    }
+    public void printPdf(JTable table, String filename, String judul) {
+	DefaultTableModel model = (DefaultTableModel) table.getModel();
+	String dest = filename;
+	Document document = new Document();
+	try {
+	    PdfWriter.getInstance(document, new FileOutputStream(dest));
+
+	    document.open();
+	    Font font = new Font(FontFamily.HELVETICA, 20, Font.BOLD);
+	    Paragraph para = new Paragraph(judul, font);
+	    para.setAlignment(Element.ALIGN_CENTER);
+	    document.add(para);
+	    float [] pointColumnWidths = {150F, 150F, 150F};
+	    int columns = model.getColumnCount();
+	    PdfPTable tablePdf = new PdfPTable(columns);
+	    
+	    document.close();
+
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+	
+	
     }
 }

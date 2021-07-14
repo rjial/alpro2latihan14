@@ -2181,6 +2181,12 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.CardLayout());
 
+        HalJadwal.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                HalJadwalComponentShown(evt);
+            }
+        });
+
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("JADWAL ANDA");
 
@@ -2246,6 +2252,11 @@ public class Main extends javax.swing.JFrame {
         jPanel7.add(filler7);
 
         jButton33.setText("Cetak Report");
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton33);
         jPanel7.add(filler8);
 
@@ -3373,9 +3384,26 @@ public class Main extends javax.swing.JFrame {
 			kelasMhs = resultMhsKelas.getString("NAMA_KELAS");
 		    }
 		} catch (Exception e) {
-		}	jMenuItem5.setVisible(false);
+		    e.printStackTrace();
+		}	
+		jMenuItem5.setVisible(false);
 		jMenuItem8.setVisible(false);
 		jMenuItem4.setVisible(false);
+		jButton30.setVisible(false);
+		jButton31.setVisible(false);
+		jButton32.setVisible(false);
+		jButton17.setVisible(false);
+		jButton1.setVisible(false);
+		jButton2.setVisible(false);
+		btntambah.setVisible(false);
+		jButton5.setVisible(false);
+		jButton6.setVisible(false);
+		jButton13.setVisible(false);
+		jButton9.setVisible(false);
+		jButton10.setVisible(false);
+		jButton37.setVisible(false);
+		jButton39.setVisible(false);
+		jButton38.setVisible(false);
 		ResultSet resultMhs = fungsi.executeResult("select * from mahasiswa where NOKRP='" + nokrp + "'");
 		jLabel123.setText("NRP");
 		jLabel126.setText("Mahasiswa");
@@ -3420,6 +3448,21 @@ public class Main extends javax.swing.JFrame {
 		ResultSet resultDosen = fungsi.executeResult("select * from dosen where NOKRP='" + nokrp + "'");
 		jLabel123.setText("NIP");
 		jLabel126.setText("Dosen");
+		jButton30.setVisible(false);
+		jButton31.setVisible(false);
+		jButton32.setVisible(false);
+		jButton17.setVisible(false);
+		jButton1.setVisible(false);
+		jButton2.setVisible(false);
+		btntambah.setVisible(false);
+		jButton5.setVisible(false);
+		jButton6.setVisible(false);
+		jButton13.setVisible(false);
+		jButton9.setVisible(false);
+		jButton10.setVisible(false);
+		jButton37.setVisible(false);
+		jButton39.setVisible(false);
+		jButton38.setVisible(false);
 		try {
 		    if (resultDosen.next()) {
 			jPanel22.setVisible(true);
@@ -4710,6 +4753,23 @@ public class Main extends javax.swing.JFrame {
 	}
     }//GEN-LAST:event_HalMahasiswaComponentShown
 
+    private void HalJadwalComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_HalJadwalComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HalJadwalComponentShown
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        // TODO add your handling code here:
+	JFileChooser fileChooser = new JFileChooser();
+	fileChooser.setDialogTitle("Specify a file to save");
+	int userSelection = fileChooser.showSaveDialog(this);
+	if (userSelection == JFileChooser.APPROVE_OPTION) {
+	    File fileToSave = fileChooser.getSelectedFile();
+	    System.out.println(fileToSave.getAbsolutePath());
+	    fungsi.printPdf(tabledata, fileToSave.getAbsolutePath(), "Hello World");
+	}
+	
+    }//GEN-LAST:event_jButton33ActionPerformed
+
     public void refreshTableJadwal() {
 	DefaultTableModel model = (DefaultTableModel) tblJadwal.getModel();
 	noJabatan = 0;
@@ -4717,7 +4777,29 @@ public class Main extends javax.swing.JFrame {
 	jButton31.setEnabled(false);
 	jButton32.setEnabled(false);
 	model.setRowCount(0);
-	ResultSet result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP");
+	ResultSet result = null;
+	switch (noJabatan) {
+	    case 1:
+		result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP");
+		break;
+	    case 2:
+		result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP where jadwal.NOKRP = '" + nokrp + "'");
+		break;
+	    case 3:
+		ResultSet resultMhsKelas = fungsi.executeResult("select NAMA_KELAS from ambil_kelas where NOKRP='" + nokrp + "'");
+		String kelasMhs = null;
+		try {
+		    if (resultMhsKelas.next()) {
+			kelasMhs = resultMhsKelas.getString("NAMA_KELAS");
+		    }
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}	result = fungsi.executeResult("SELECT jadwal.ID, MATA_KULIAH.NAMA_MK, kelas.NAMA_KELAS, orang.NAMA, jadwal.TGL_MASUK, jadwal.TGL_KELUAR, jadwal.RUANG, jadwal.PERTEMUAN, jadwal.PERIODE, jadwal.HARI, jadwal.JAM_MULAI, jadwal.JAM_SELESAI FROM jadwal inner join MATA_KULIAH on jadwal.KODE_MK = MATA_KULIAH.KODE_MK inner join kelas on jadwal.NAMA_KELAS = kelas.NAMA_KELAS inner join orang on jadwal.NOKRP = orang.NOKRP where jadwal.NAMA_KELAS = '" + kelasMhs + "'");
+		break;
+	    default:
+		break;
+	}
+	
 	Object[] row = new Object[11];
 	try {
 	    while (result.next()) {
