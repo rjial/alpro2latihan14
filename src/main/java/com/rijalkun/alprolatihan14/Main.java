@@ -3533,7 +3533,8 @@ public class Main extends javax.swing.JFrame {
 			modelJadwalDash.addRow(modelJadwal);
 		    }
 		} catch (Exception e) {
-		}	jPanel22.setVisible(false);
+		}	
+		jPanel22.setVisible(false);
 		jPanel21.setVisible(false);
 		jPanel26.setVisible(false);
 		jPanel24.setVisible(false);
